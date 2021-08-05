@@ -1,0 +1,9 @@
+.player {
+    &__seek-controls {
+        display: flex;
+        gap: $space-xsm;
+        width: $clamp-player-seek-control-width;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

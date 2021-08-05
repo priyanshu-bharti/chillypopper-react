@@ -1,0 +1,6 @@
+.about {
+    &__img {
+        width: clamp(28rem, 80vw, 40rem);
+        margin: 0 auto;
+    }
+}

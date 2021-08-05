@@ -1,0 +1,11 @@
+.about {
+    &__question {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+
+        &--answer {
+            font-size: 1.35rem;
+            line-height: 2.5rem;
+        }
+    }
+}

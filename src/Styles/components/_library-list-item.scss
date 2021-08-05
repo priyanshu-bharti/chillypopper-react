@@ -1,0 +1,15 @@
+.library {
+    &__list {
+        &-item {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+    &__song-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+    }
+}

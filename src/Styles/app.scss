@@ -1,0 +1,40 @@
+// Common
+@import "common/variables";
+@import "common/animations";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+// Base
+@import "base/base";
+
+// Layouts
+@import "layouts/home";
+@import "layouts/library";
+@import "layouts/about";
+
+// Elements
+@import "elements/menu-title";
+@import "elements/menu-icon";
+@import "elements/artwork";
+@import "elements/song-info-artist";
+@import "elements/song-info-title";
+@import "elements/player-duration";
+@import "elements/player-seek-bar";
+@import "elements/player-control-icon";
+@import "elements/library-song-cover";
+@import "elements/library-song-artist";
+@import "elements/library-close-icon";
+@import "elements/about-button";
+@import "elements/about-headline";
+@import "elements/about-img";
+@import "elements/about-question";
+
+// Components
+@import "components/nav-header";
+@import "components/song-info";
+@import "components/player-seek-controls";
+@import "components/player-control";
+@import "components/player";
+@import "components/library-list-item";
+@import "components/about-socials";

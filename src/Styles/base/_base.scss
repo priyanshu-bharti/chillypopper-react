@@ -1,0 +1,23 @@
+// CSS Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+
+    &::selection {
+        background-color: #0000;
+    }
+}
+
+body {
+    font-family: $poppins;
+    font-size: $font-size-body;
+    background-color: $color-darkmode;
+    text-shadow: 0px 0px 15px #c5c5c53b;
+}
+
+:root {
+    font-size: $font-size-root;
+}

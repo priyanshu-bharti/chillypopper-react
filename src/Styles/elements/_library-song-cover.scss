@@ -1,0 +1,12 @@
+.library {
+    &__song--cover {
+        height: 8rem;
+        width: 8rem;
+
+        & img {
+            height: 100%;
+            border-radius: $border-radius-circle;
+            border: $border-library-cover;
+        }
+    }
+}

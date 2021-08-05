@@ -1,0 +1,18 @@
+.player__control {
+    &--play-button {
+        border-radius: $border-radius-circle;
+        height: $space-lg;
+        width: $space-lg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-icon {
+        font-size: $font-size-player-icon;
+        &--white {
+            color: $color-white;
+            font-size: $font-size-player-icon * 1.5;
+        }
+    }
+}

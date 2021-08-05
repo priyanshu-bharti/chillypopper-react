@@ -1,0 +1,15 @@
+.artwork {
+    $height-artwork: 24rem;
+    height: $height-artwork;
+    width: $height-artwork;
+    border: $border-artwork;
+    border-radius: $border-radius-circle;
+    overflow: hidden;
+    transition: border 300ms;
+    // box-shadow: $shadow-library-sidebar;
+
+    img {
+        height: 100%;
+        border-radius: $border-radius-circle;
+    }
+}

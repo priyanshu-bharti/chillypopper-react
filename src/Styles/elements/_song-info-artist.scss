@@ -1,0 +1,7 @@
+.song-info {
+    &__artist {
+        font-size: $font-size-song-info-artist;
+        text-align: center;
+        font-weight: $font-weight-song-info-artist;
+    }
+}

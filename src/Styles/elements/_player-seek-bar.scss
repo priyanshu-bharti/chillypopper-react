@@ -1,0 +1,47 @@
+.player {
+    &__seek-bar {
+        width: 100%;
+        &--wrapper {
+            background-color: $color-grey-transparent;
+            height: $height-seek-bar;
+            border-radius: 50rem;
+            position: relative;
+            flex: 1;
+        }
+        appearance: none;
+        background-color: transparent;
+        &::-webkit-slider-thumb {
+            appearance: none;
+            z-index: 10;
+            height: $height-seek-bar-thumb;
+            width: $height-seek-bar-thumb;
+            background-color: $color-white;
+            box-shadow: $shadow-seek-thumb;
+            border-radius: $border-radius-circle;
+            transform: translateY(-25%);
+        }
+
+        &::-moz-range-thumb {
+            appearance: none;
+            z-index: 10;
+            height: $height-seek-bar-thumb;
+            width: $height-seek-bar-thumb;
+            background-color: $color-white;
+            box-shadow: $shadow-seek-thumb;
+            border-radius: $border-radius-circle;
+            border: none;
+            transform: translateY(-25%);
+        }
+
+        &--gradient {
+            width: 50%;
+            height: $height-seek-bar;
+            position: absolute;
+            top: 0;
+            border-radius: 50rem;
+            background-color: #000;
+        }
+
+        flex: 1;
+    }
+}

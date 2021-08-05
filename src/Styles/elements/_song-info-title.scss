@@ -1,0 +1,7 @@
+.song-info {
+    &__title {
+        font-size: $font-size-song-info-title;
+        text-align: center;
+        font-weight: $font-weight-song-info-title;
+    }
+}

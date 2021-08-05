@@ -1,0 +1,82 @@
+/* ------------------------------- FONT FAMILY ------------------------------ */
+$poppins: "Poppins", sans-serif;
+
+/* -------------------------------- FONT SIZE ------------------------------- */
+// Font size Body
+$font-size-root: 10px;
+$font-size-reference: 1rem;
+$font-size-body: $font-size-reference * 1.6;
+// Nav Menu
+$font-size-menu-title: $font-size-reference * 2.2; // Desktop needs to be big
+$font-size-menu-icon: $font-size-menu-title;
+// Nav Options
+$font-size-nav-option-title: $font-size-reference * 1.8;
+$font-size-nav-option-icon: $font-size-nav-option-title + 0.2rem;
+// Library
+$font-size-library-song-title: $font-size-reference * 1.6;
+$font-size-library-song-artist: $font-size-reference * 1.4;
+// Player Icons
+$font-size-player-icon: $font-size-reference * 2;
+$font-size-time-duration: $font-size-reference * 1.3;
+// Song Info
+$font-size-song-info-title: $font-size-reference * 2;
+$font-size-song-info-artist: $font-size-reference * 1.4;
+
+/* ------------------------------- FONT WEIGHT ------------------------------ */
+$font-weight-song-info-title: 600;
+$font-weight-song-info-artist: 400;
+$font-weight-player-duration: 300;
+
+/* --------------------------------- COLORS --------------------------------- */
+$color-darkmode: #353535;
+$color-darkmode-transparent: #3535359c;
+$color-grey: #adb5bd;
+$color-darkgrey: #797979;
+$color-white: #fbf7ed;
+$color-grey-transparent: #77777745;
+$color-lightgrey-transparent: #8f8f8f36;
+$color-shadow-black: #0000003d;
+
+/* --------------------------------- BORDERS -------------------------------- */
+// Artwork Border
+$border-artwork: 1rem solid $color-white;
+$border-artwork-dark: 1rem solid $color-lightgrey-transparent;
+// Library Covers
+$border-library-cover: 0.6rem solid $color-white;
+// Border Dividers
+$border-item-divider: 0.1rem solid $color-grey-transparent;
+
+/* ------------------------------ BORDER RADII ------------------------------ */
+// Circle
+$border-radius-circle: 100%;
+// Rounded edges
+$border-radius-rounded: 10rem;
+
+/* --------------------------------- SPACING -------------------------------- */
+// Used in padding and margin
+$space-xsm: 1rem;
+$space-sm: 2rem;
+$space-md: 3rem;
+$space-lg: 4rem;
+$space-xlg: 6rem;
+
+/* --------------------------------- SHADOWS -------------------------------- */
+$shadow-seek-thumb: 0px 0px 12px 0px $color-shadow-black;
+$shadow-seek-bar: 0px 0px 6px 0px $color-shadow-black;
+$shadow-library-sidebar: 4px 0px 25px 0px $color-shadow-black;
+$shadow-nav-menu: 0px 4px 25px 0px $color-shadow-black;
+
+// The artwork style to be used inside artwork.js
+// style={{
+//     boxShadow: `-5px -5px 25px 0px ${gradientOne}5c , 5px 5px 25px 0px ${gradientTwo}5c`,
+//     animation: "spinning 4s infinite linear",
+//     animationPlayState: isPlaying ? "running" : "paused",
+// }}
+
+/* ---------------------------- RESPONSIVE CLAMPS --------------------------- */
+$clamp-player-seek-control-width: clamp(28rem, 50vw, 90rem);
+$clamp-song-info-gap: clamp(0.5rem, 3vw, 3rem);
+
+/* --------------------------------- HEIGHTS -------------------------------- */
+$height-seek-bar: 1rem;
+$height-seek-bar-thumb: 2rem;

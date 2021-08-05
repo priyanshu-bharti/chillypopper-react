@@ -1,0 +1,42 @@
+.app {
+    &__wrapper {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(auto, 1fr) auto minmax(auto, 1fr);
+        gap: clamp(1rem, 5vw, 3rem);
+        transition: background 300ms, color 300ms;
+        transition-timing-function: cubic-bezier(0.45, 0.01, 0.69, 1);
+
+        .nav__header {
+            grid-row: 1/2;
+        }
+
+        .artwork {
+            grid-row: 2/3;
+        }
+
+        .song-info {
+            grid-row: 3/4;
+        }
+
+        .player {
+            grid-row: 4/5;
+        }
+
+        .artwork,
+        .song-info,
+        .player {
+            place-self: center;
+        }
+    }
+}
+
+.dark-mode {
+    background: $color-darkmode;
+    color: $color-white;
+}
+.light-mode {
+    background: $color-white;
+    color: $color-darkmode;
+}

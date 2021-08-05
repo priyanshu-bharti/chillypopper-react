@@ -1,0 +1,10 @@
+.player {
+    &__duration {
+        font-size: $font-size-time-duration;
+        font-weight: $font-weight-player-duration;
+        color: $color-darkgrey;
+        width: 4rem;
+        text-align: center;
+        margin-top: 0.1rem;
+    }
+}
