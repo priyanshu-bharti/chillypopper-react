@@ -2,7 +2,7 @@ import React from "react";
 import LibraryHeader from "../Components/Library/LibraryHeader";
 import LibraryListItem from "../Components/Library/LibraryListItem";
 
-function Library({ uiState, setUiState }) {
+function Library({ uiState, setUiState, setSongState, songState, songData }) {
     return (
         <div
             className={`library ${
@@ -11,7 +11,13 @@ function Library({ uiState, setUiState }) {
         >
             <LibraryHeader uiState={uiState} setUiState={setUiState} />
             <div className="library__wrapper">
-                <LibraryListItem />
+                {songData.map((song) => (
+                    <LibraryListItem
+                        song={song}
+                        songState={songState}
+                        setSongState={setSongState}
+                    />
+                ))}
             </div>
         </div>
     );

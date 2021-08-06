@@ -5,12 +5,7 @@ function AboutHeaderCloseIcon({ uiState, setUiState }) {
     const aboutCloseHandler = () => {
         setUiState({ ...uiState, aboutShown: false });
     };
-    return (
-        <RiCloseFill
-            className="library__menu__icon"
-            onClick={aboutCloseHandler}
-        />
-    );
+    return <RiCloseFill className="menu__icon" onClick={aboutCloseHandler} />;
 }
 
 export default AboutHeaderCloseIcon;

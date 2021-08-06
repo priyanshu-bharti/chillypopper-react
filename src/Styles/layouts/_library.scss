@@ -4,11 +4,11 @@
     display: flex;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(3rem);
     flex-direction: column;
     transition: transform 500ms;
     transition-timing-function: cubic-bezier(0.45, 0, 0.53, 0.97);
-
+    // background-color: #353535cc;
+    backdrop-filter: blur(3rem);
     &--hidden {
         transform: translateX(-100%);
     }
@@ -16,9 +16,6 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        padding: $space-sm;
-        gap: $space-sm;
-
         overflow-y: scroll;
         scrollbar-width: thin;
         scrollbar-color: #7777 $color-grey-transparent;
@@ -34,5 +31,29 @@
             background: #7777;
             border-radius: 10rem;
         }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .library {
+        position: relative;
+        backdrop-filter: unset;
+        height: 100%;
+
+        .nav__header {
+            display: none;
+        }
+        &__menu {
+            &__icon {
+                display: none;
+            }
+        }
+        &__wrapper {
+            flex: 1;
+        }
+    }
+
+    .disabled-on-desktop {
+        color: rgba(139, 139, 139, 0.596);
     }
 }

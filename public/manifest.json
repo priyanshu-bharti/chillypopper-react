@@ -1,6 +1,10 @@
 {
+    "name": "ChillyPopper - Minimal Music Player",
     "short_name": "ChillyPopper",
-    "name": "Project by Priyanshu Bharti",
+    "theme_color": "#ef476f",
+    "background_color": "#353535",
+    "display": "standalone",
+    "orientation": "any",
     "icons": [
         {
             "src": "favicon.ico",
@@ -18,8 +22,6 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#353535",
-    "background_color": "#edf2fb"
+    "start_url": "/",
+    "scope": "/"
 }

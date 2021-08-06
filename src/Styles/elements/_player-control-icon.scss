@@ -6,9 +6,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        transition: background 300ms;
     }
 
     &-icon {
+        cursor: pointer;
         font-size: $font-size-player-icon;
         &--white {
             color: $color-white;

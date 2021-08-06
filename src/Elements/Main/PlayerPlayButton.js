@@ -5,9 +5,15 @@ import shadow from "../../Utils/Shadows";
 import colors from "../../Utils/Colors";
 import gradients from "../../Utils/Gradients";
 
-function PlayerPlayButton({ uiState, setUiState }) {
+function PlayerPlayButton({ uiState, setUiState, songState, audioRef }) {
+    const currentPalette = songState.currentSong[0].palette;
     const playPauseHandler = () => {
         setUiState({ ...uiState, songPlaying: !uiState.songPlaying });
+        if (uiState.songPlaying === true) {
+            audioRef.current.pause();
+        } else {
+            audioRef.current.play();
+        }
     };
 
     const PlayPauseButton = () => {
@@ -27,9 +33,14 @@ function PlayerPlayButton({ uiState, setUiState }) {
             className="player__control--play-button"
             onClick={playPauseHandler}
             style={{
-                background: `${gradients.pink}`,
-                boxShadow: `${shadow(4, 4, 15, 0, colors.purple)},  
-                ${shadow(-4, -4, 15, 0, colors.red)}`,
+                boxShadow: `${shadow(
+                    0,
+                    0,
+                    15,
+                    0,
+                    colors[`${currentPalette}`]
+                )}`,
+                background: `${gradients[`${currentPalette}`]}`,
             }}
         >
             <PlayPauseButton />

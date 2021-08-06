@@ -5,3 +5,11 @@
         font-weight: $font-weight-song-info-title;
     }
 }
+
+@media only screen and (min-width: 900px) {
+    .song-info {
+        &__title {
+            font-size: $font-size-song-info-title * 1.5;
+        }
+    }
+}

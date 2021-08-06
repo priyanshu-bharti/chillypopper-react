@@ -3,5 +3,13 @@
         font-size: $font-size-song-info-artist;
         text-align: center;
         font-weight: $font-weight-song-info-artist;
+        transition: color 300ms;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .song-info {
+        &__artist {
+            font-size: $font-size-song-info-artist * 1.25;
+        }
     }
 }

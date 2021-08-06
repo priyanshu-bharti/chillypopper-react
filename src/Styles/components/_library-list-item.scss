@@ -4,6 +4,11 @@
             display: flex;
             gap: 2rem;
             align-items: center;
+            padding: 2rem;
+
+            &:hover {
+                background-color: #ffffff13;
+            }
         }
     }
     &__song-column {
@@ -11,5 +16,13 @@
         flex-direction: column;
         gap: 1rem;
         flex: 1;
+    }
+}
+
+.active-song {
+    background-color: #ffffff3a;
+
+    &:hover {
+        background-color: #ffffff3a;
     }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-function LibrarySongArtist() {
-    return <h4 className="library__song--artist">Song Artist</h4>;
+function LibrarySongArtist({ song }) {
+    return <h4 className="library__song--artist">{song.artist}</h4>;
 }
 
 export default LibrarySongArtist;

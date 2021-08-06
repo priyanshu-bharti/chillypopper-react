@@ -1,5 +1,6 @@
-Make the player look good on the desktop
-Make the song data object
 Implement Audio playing Functionality
-Make the player button work
-Implement the background and shadows change for active songs
+Implement bug fixes in the skipping, playing/pausing and artwork rotations
+Implement the webstorage API for saving the data
+Make Performance Optimizations
+Implement Caching for offline use
+Implement a website preloader

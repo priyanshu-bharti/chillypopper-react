@@ -2,12 +2,16 @@ import React from "react";
 import PlayerDuration from "../../Elements/Main/PlayerDuration";
 import PlayerSeekBar from "../../Elements/Main/PlayerSeekBar";
 
-function SeekControl() {
+function SeekControl({ songState, setSongState, audioRef }) {
     return (
         <div className="player__seek-controls">
-            <PlayerDuration value={"00:00"} />
-            <PlayerSeekBar />
-            <PlayerDuration value={"03:27"} />
+            <PlayerDuration value={`0`} />
+            <PlayerSeekBar
+                songState={songState}
+                setSongState={setSongState}
+                audioRef={audioRef}
+            />
+            <PlayerDuration value={`0`} />
         </div>
     );
 }

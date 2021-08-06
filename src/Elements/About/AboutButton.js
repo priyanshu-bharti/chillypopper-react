@@ -13,7 +13,7 @@ function AboutButton() {
                 background: `${gradients.magenta}`,
             }}
         >
-            View My Portfolio
+            View Portfolio
         </a>
     );
 }
