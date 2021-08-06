@@ -4,15 +4,28 @@ import LibrarySongArtist from "../../Elements/Library/LibrarySongArtist";
 import LibrarySongCover from "../../Elements/Library/LibrarySongCover";
 import LibrarySongTitle from "../../Elements/Library/LibrarySongTitle";
 
-function LibraryListItem({ song, setSongState, songState }) {
+function LibraryListItem({ song, setSongState, songState, audioRef }) {
     // console.log(song.id === songState.currentSong[0].id);
+    // currentSong: [songData[(currentIndex + 1) % songData.length]],
 
     const changeCurrentSongHandler = () => {
-        // let choiceSong = songData.filter();
-        setSongState({
-            ...songState,
-            currentSong: [songData[songData.findIndex((s) => s === song)]],
-        });
+        setTimeout(() => {
+            setSongState({
+                ...songState,
+                currentSong: [songData[songData.findIndex((s) => s === song)]],
+            });
+            console.log(songState.isPlaying);
+            if (songState.isPlaying) {
+                const playPromise = audioRef.current.play();
+                console.log(playPromise);
+                if (playPromise !== undefined) {
+                    console.log("undefined");
+                    playPromise.then((audio) => {
+                        audioRef.current.play();
+                    });
+                }
+            }
+        }, 150);
     };
     return (
         <div

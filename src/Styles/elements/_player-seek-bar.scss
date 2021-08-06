@@ -34,12 +34,11 @@
         }
 
         &--gradient {
-            width: 50%;
+            max-width: 100%;
             height: $height-seek-bar;
             position: absolute;
             top: 0;
             border-radius: 50rem;
-            background-color: #000;
         }
 
         flex: 1;

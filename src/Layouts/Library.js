@@ -2,7 +2,14 @@ import React from "react";
 import LibraryHeader from "../Components/Library/LibraryHeader";
 import LibraryListItem from "../Components/Library/LibraryListItem";
 
-function Library({ uiState, setUiState, setSongState, songState, songData }) {
+function Library({
+    uiState,
+    setUiState,
+    setSongState,
+    songState,
+    songData,
+    audioRef,
+}) {
     return (
         <div
             className={`library ${
@@ -16,6 +23,7 @@ function Library({ uiState, setUiState, setSongState, songState, songData }) {
                         song={song}
                         songState={songState}
                         setSongState={setSongState}
+                        audioRef={audioRef}
                     />
                 ))}
             </div>

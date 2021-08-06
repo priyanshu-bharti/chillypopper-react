@@ -5,14 +5,22 @@ import shadow from "../../Utils/Shadows";
 import colors from "../../Utils/Colors";
 import gradients from "../../Utils/Gradients";
 
-function PlayerPlayButton({ uiState, setUiState, songState, audioRef }) {
+function PlayerPlayButton({
+    uiState,
+    setUiState,
+    songState,
+    audioRef,
+    setSongState,
+}) {
     const currentPalette = songState.currentSong[0].palette;
     const playPauseHandler = () => {
         setUiState({ ...uiState, songPlaying: !uiState.songPlaying });
         if (uiState.songPlaying === true) {
             audioRef.current.pause();
+            setSongState({ ...songState, isPlaying: false });
         } else {
             audioRef.current.play();
+            setSongState({ ...songState, isPlaying: true });
         }
     };
 

@@ -35,6 +35,14 @@ function PlayerControl({
                     ],
                 });
             }
+            if (songState.isPlaying) {
+                const playPromise = audioRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.then((audio) => {
+                        audioRef.current.play();
+                    });
+                }
+            }
         }, 300);
     };
 
@@ -44,8 +52,10 @@ function PlayerControl({
                 ...songState,
                 currentSong: [songData[(currentIndex + 1) % songData.length]],
             });
-            // playAudio(isPlaying, audioRef);
-        }, 300);
+            if (songState.isPlaying) {
+                audioRef.current.play();
+            }
+        }, 150);
     };
 
     const darkModeToggleHandler = () => {
@@ -105,6 +115,7 @@ function PlayerControl({
             <PlayerPlayButton
                 uiState={uiState}
                 setUiState={setUiState}
+                setSongState={setSongState}
                 songState={songState}
                 audioRef={audioRef}
             />

@@ -2,7 +2,7 @@ import React from "react";
 import PlayerDuration from "../../Elements/Main/PlayerDuration";
 import PlayerSeekBar from "../../Elements/Main/PlayerSeekBar";
 
-function SeekControl({ songState, setSongState, audioRef }) {
+function SeekControl({ songState, setSongState, audioRef, seekWidth }) {
     const getTime = (time) => {
         return (
             Math.floor(time / 60) +
@@ -24,8 +24,15 @@ function SeekControl({ songState, setSongState, audioRef }) {
                 songState={songState}
                 setSongState={setSongState}
                 audioRef={audioRef}
+                seekWidth={seekWidth}
             />
-            <PlayerDuration value={`${getTime(songState.duration)}`} />
+            <PlayerDuration
+                value={`${
+                    getTime(songState.duration) === "NaN:aN"
+                        ? "0:00"
+                        : getTime(songState.duration)
+                }`}
+            />
         </div>
     );
 }
