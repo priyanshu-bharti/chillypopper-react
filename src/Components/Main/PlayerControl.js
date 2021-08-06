@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
     RiPlayListLine,
     RiSunLine,
@@ -62,8 +62,12 @@ function PlayerControl({
         setUiState({ ...uiState, darkMode: !uiState.darkMode });
     };
 
-    const libraryToggleHandler = () => {
-        setUiState({ ...uiState, libraryShown: true });
+    const libraryToggleHandler = (e) => {
+        console.log(window.visualViewport.width);
+        if (window.visualViewport.width < 900) {
+            setUiState({ ...uiState, libraryShown: true });
+            console.log("changed");
+        }
     };
 
     const songEndHandler = async () => {
