@@ -1,4 +1,3 @@
-Implement Audio playing Functionality
 Implement bug fixes in the skipping, playing/pausing and artwork rotations
 Implement the webstorage API for saving the data
 Make Performance Optimizations

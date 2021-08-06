@@ -4,14 +4,19 @@ import gradients from "../../Utils/Gradients";
 import shadow from "../../Utils/Shadows";
 
 function PlayerSeekBar({ songState, audioRef, setSongState }) {
+    const [seekWidth, setSeekWidth] = useState(0);
     const currentPalette = songState.currentSong[0].palette;
-    const [seekPercentage, setSeekPercentage] = useState(0);
 
     const playerSeekHandler = (e) => {
         //Changing the value of the duration and elapsed
         const value = e.target.value;
         audioRef.current.currentTime = value;
         setSongState({ ...songState, elapsed: value });
+
+        // Making the value of width equal to that of the seek
+        setSeekWidth(
+            (audioRef.current.currentTime / audioRef.current.duration) * 100
+        );
     };
 
     return (
@@ -27,13 +32,13 @@ function PlayerSeekBar({ songState, audioRef, setSongState }) {
                         colors[`${currentPalette}`]
                     )}`,
                     background: `${gradients[`${currentPalette}`]}`,
-                    width: `${50}%`,
+                    width: `${seekWidth}%`,
                 }}
             ></div>
             <input
                 min={0}
-                max={100}
-                value={50}
+                max={songState.duration || 0}
+                value={songState.elapsed || 0}
                 onChange={playerSeekHandler}
                 type="range"
                 className="player__seek-bar"

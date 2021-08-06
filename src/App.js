@@ -37,6 +37,17 @@ function App() {
     // Setting the background as the cover artwork
     document.body.style.backgroundImage = `url('${songState.currentSong[0].coverUrl}')`;
 
+    const songInfoHandler = (e) => {
+        const elapsed = e.target.currentTime;
+        const duration = e.target.duration;
+        setSongState({
+            ...songState,
+            duration: duration,
+            elapsed: elapsed,
+        });
+        console.log(songState.elapsed, songState.duration);
+    };
+
     return (
         <div
             className={`app__wrapper ${
@@ -75,6 +86,13 @@ function App() {
                 songData={songData}
             />
             <About uiState={uiState} setUiState={setUiState} />
+            <audio
+                ref={audioRef}
+                src={songState.currentSong[0].audio}
+                onTimeUpdate={songInfoHandler}
+                onLoadedMetadata={songInfoHandler}
+                // onEnded={songEndHandler}
+            ></audio>
         </div>
     );
 }

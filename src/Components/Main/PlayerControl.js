@@ -20,16 +20,6 @@ function PlayerControl({
         (song) => song === songState.currentSong[0]
     );
 
-    const songInfoHandler = (e) => {
-        const elapsed = e.target.currentTime;
-        const duration = e.target.duration;
-        setSongState({
-            ...songState,
-            duration: duration,
-            elapsed: elapsed,
-        });
-    };
-
     const previousSongHandler = () => {
         setTimeout(() => {
             if ((currentIndex - 1) % songData.length === -1) {
@@ -63,7 +53,6 @@ function PlayerControl({
     };
 
     const libraryToggleHandler = (e) => {
-        console.log(window.visualViewport.width);
         if (window.visualViewport.width < 900) {
             setUiState({ ...uiState, libraryShown: true });
             console.log("changed");
@@ -124,13 +113,6 @@ function PlayerControl({
                 onClick={nextSongHandler}
             />
             <DarkModeButton />
-            <audio
-                ref={audioRef}
-                src={songState.currentSong[0].audio}
-                onTimeUpdate={songInfoHandler}
-                onLoadedMetadata={songInfoHandler}
-                // onEnded={songEndHandler}
-            ></audio>
         </div>
     );
 }
